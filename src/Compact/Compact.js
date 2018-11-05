@@ -1,10 +1,10 @@
 function Compact(arr) {
 	const result = [];
-	arr.forEach(function (e) {
-		if (e) {
-			result.push(e);
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i]) {
+			result.push(arr[i]);
 		}
-	});
+	}
 	return result;
 }
 
