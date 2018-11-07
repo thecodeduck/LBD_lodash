@@ -1,6 +1,7 @@
 function Compact(arr) {
 	const result = [];
-	for (let i = 0; i < arr.length; i++) {
+	const l = !arr.length ? 0 : arr.length;
+	for (let i = 0; i < l; i++) {
 		if (arr[i]) {
 			result.push(arr[i]);
 		}
