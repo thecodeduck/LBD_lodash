@@ -1,5 +1,5 @@
 function Difference() {
-	const arr = arguments[0].slice();
+	const arr = Array.isArray(arguments[0]) ? arguments[0].slice() : [];
 	const arrl = arr.length;
 	const argl = arguments.length - 1;
 	if (argl === 0) {
