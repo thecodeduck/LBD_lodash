@@ -1,7 +1,5 @@
 ```
-_.fill(array, value, [start=0], [end=array.length])
+_.flatten(array)
 ```
 
-Fills elements of array with value from start up to, but not including, end.
-
-Note: This method mutates array.
+Flattens array a single level deep.
