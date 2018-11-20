@@ -3,7 +3,7 @@ function FromPairs(arr) {
 	const l = arr.length;
 	const result = {};
 	if (l === 0) {
-		return {};
+		return result;
 	}
 	for (let i = 0; i < l; i++) {
 		if (arr[i]) {
