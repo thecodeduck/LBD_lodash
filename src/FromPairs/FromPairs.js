@@ -14,4 +14,6 @@ function FromPairs(arr) {
 	return result;
 }
 
+// fromPairs doesn't handle [undefined] inputs
+
 module.exports = FromPairs;
