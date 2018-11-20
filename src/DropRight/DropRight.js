@@ -9,7 +9,4 @@ function DropRight(arr, n) {
 	return arr.slice(0, arr.length - n);
 }
 
-// Always check for unexpected inputs, like Objects
-
-
 module.exports = DropRight;

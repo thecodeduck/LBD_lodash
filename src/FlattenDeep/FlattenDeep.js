@@ -5,15 +5,18 @@ function FlattenDeep(arr) {
 	if (l === 0) {
 		return [];
 	}
-	for (let i = 0; i < l; i++) {
-		let x = arr[i];
+	const flatten = function (x) {
 		if (Array.isArray(x)) {
 			for (let ii = 0; ii < x.length; ii++) {
-				result.push(x[ii]);
+				flatten(x[ii]);
 			}
 		} else {
 			result.push(x);
 		}
+	};
+	for (let i = 0; i < l; i++) {
+		let x = arr[i];
+		flatten(x);
 	}
 	return result;
 }

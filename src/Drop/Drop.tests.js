@@ -32,6 +32,11 @@ describe('Drop is equal to _.drop', function () {
 		var output = _.drop(...input);
 		chai.assert.deepEqual(output, Drop(...input), 'whoops');
 	});
+	it('Drop([ array ], string) is equal to _.drop([ array ], string)', function () {
+		var input = [ [ '', 1, 2, 3, [ 4 ] ], 'string' ];
+		var output = _.drop(...input);
+		chai.assert.deepEqual(output, Drop(...input), 'whoops');
+	});
 	it('Drop([object, integer]) is equal to _.drop([object, integer])', function () {
 		var input = [ { 1: 'a', 2: { 3: 'c' } }, 2 ];
 		var output = _.drop(...input);
