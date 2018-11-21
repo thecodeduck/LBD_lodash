@@ -10,36 +10,36 @@ describe('Concat is equal to _.concat', function () {
 	it('Concat([ array, inputs ]) is equal to _.concat([ array, inputs ])', function () {
 		var input = [ [ 1, 2, 3, [ 4 ] ], [ 'x', 5, [ 6, 7 ], [ '8', [ '9' ] ], [ [ 'a', [ 'b' ], 'c' ], 'd' ] ] ];
 		var output = _.concat(...input);
-		chai.assert.deepEqual(output, Concat(...input), 'whoops');
+		chai.assert.deepEqual(Concat(...input), output, 'whoops');
 	});
 	it('Concat([ ]) is equal to _.concat([ ])', function () {
 		var input = [ ];
 		var output = _.concat(...input);
-		chai.assert.deepEqual(output, Concat(...input), 'whoops');
+		chai.assert.deepEqual(Concat(...input), output, 'whoops');
 	});
 	it('Concat([ undefined ]) is equal to _.concat([ undefined ])', function () {
 		var input = [ undefined ];
 		var output = _.concat(...input);
-		chai.assert.deepEqual(output, Concat(...input), 'whoops');
+		chai.assert.deepEqual(Concat(...input), output, 'whoops');
 	});
 	it('Concat([ [ undefined ], args ]) is equal to _.concat([ [ undefined ], args ])', function () {
 		var input = [ [ undefined ], 1, 2, 3 ];
 		var output = _.concat(...input);
-		chai.assert.deepEqual(output, Concat(...input), 'whoops');
+		chai.assert.deepEqual(Concat(...input), output, 'whoops');
 	});
 	it('Concat([ string, integer ]) is equal to _.concat([ string, integer ])', function () {
 		var input = [ '1', [ 2 ] ];
 		var output = _.concat(...input);
-		chai.assert.deepEqual(output, Concat(...input), 'whoops');
+		chai.assert.deepEqual(Concat(...input), output, 'whoops');
 	});
 	it('Concat([ string, string ]) is equal to _.concat([ string, string ])', function () {
 		var input = [ 'cat', 'dog' ];
 		var output = _.concat(...input);
-		chai.assert.deepEqual(output, Concat(...input), 'whoops');
+		chai.assert.deepEqual(Concat(...input), output, 'whoops');
 	});
 	it('Concat([object, integer]) is equal to _.concat([object, integer])', function () {
 		var input = [ { 1: 'a', 2: { 3: 'c' } }, 2 ];
 		var output = _.concat(...input);
-		chai.assert.deepEqual(output, Concat(...input), 'whoops');
+		chai.assert.deepEqual(Concat(...input), output, 'whoops');
 	});
 });
