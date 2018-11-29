@@ -27,6 +27,12 @@ describe('FlattenDepth is equal to _.flattenDepth', function () {
 		var output = _.flattenDepth(...input);
 		chai.assert.deepEqual(FlattenDepth(...input), output, 'whoops');
 	});
+	it('FlattenDepth([ array, [ integer ] ]) is equal to _.flattenDepth([ array, [ integer ] ])', function () {
+		var input = [ [ 'a', 'b', 'c', [ 'd', 'e', [ 'f', 'g' ] ] ], [ 2 ] ];
+		var output = _.flattenDepth(...input);
+		chai.assert.deepEqual(FlattenDepth(...input), output, 'whoops');
+	});
+
 	it('FlattenDepth([ array, integer ]) is equal to _.flattenDepth([ array, integer ])', function () {
 		var input = [ [ 1, [ 2, [ 3, [ 4, [ 'X' ], [ 'Z' ] ], [ 5 ] ], 6, [ 'a', 'b' ] ] ], 3 ];
 		var output = _.flattenDepth(...input);

@@ -3,11 +3,10 @@ function FlattenDepth(arr, depth) {
 	const l = arr.length;
 	const result = [];
 
-	depth = depth === undefined ? 1 : depth;
-	if (l === 0 || typeof depth !== 'number') {
+	depth = depth === undefined ? 1 : Math.floor(depth);
+	if (l === 0 || Number.isNaN(depth)) {
 		return arr;
 	}
-	depth = Math.floor(depth);
 	let counter = 0;
 
 	const flatten = function (x) {
