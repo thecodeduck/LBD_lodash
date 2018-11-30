@@ -47,7 +47,7 @@ describe('Head is equal to _.head', function () {
 		var output = _.head(input);
 		chai.assert.deepEqual(output, Head(input), 'whoops');
 	});
-	it('Head([ array ], integer, [ integer ], [ integer ]) is equal to _.head([ array ], integer, [ integer ], [ integer ])', function () {
+	it('Head({object}) is equal to _.head({object})', function () {
 		var input = { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5 };
 		var output = _.head(input);
 		chai.assert.deepEqual(output, Head(input), 'whoops');

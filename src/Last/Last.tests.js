@@ -47,7 +47,7 @@ describe('Last is equal to _.last', function () {
 		var output = _.last(input);
 		chai.assert.deepEqual(output, Last(input), 'whoops');
 	});
-	it('Last([ array ], integer, [ integer ], [ integer ]) is equal to _.last([ array ], integer, [ integer ], [ integer ])', function () {
+	it('Last({object}) is equal to _.last({object})', function () {
 		var input = { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5 };
 		var output = _.last(input);
 		chai.assert.deepEqual(output, Last(input), 'whoops');
