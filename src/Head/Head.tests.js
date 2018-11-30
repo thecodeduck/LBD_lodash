@@ -37,12 +37,11 @@ describe('Head is equal to _.head', function () {
 		var output = _.head(input);
 		chai.assert.deepEqual(output, Head(input), 'whoops');
 	});
-	// Lodash baseSlice gives strange result - copy original?
-	// it('Head(string) is equal to _.head(string)', function () {
-	// 	var input = 'string';
-	// 	var output = _.head(input);
-	// 	chai.assert.deepEqual(output, Head(input), 'whoops');
-	// });
+	it('Head(string) is equal to _.head(string)', function () {
+		var input = 'string';
+		var output = _.head(input);
+		chai.assert.deepEqual(output, Head(input), 'whoops');
+	});
 	it('Head(integer) is equal to _.head(integer)', function () {
 		var input = 2;
 		var output = _.head(input);
