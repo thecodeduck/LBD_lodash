@@ -3,41 +3,46 @@ const Difference = require('./Difference.js');
 const chai = require('chai');
 const _ = require('lodash');
 
-describe('Difference is equal to _.difference', function () {
-	it('Difference is a function', function () {
+describe('Difference is equal to _.difference', () => {
+	it('Difference is a function', () => {
 		chai.assert.isFunction(Difference, 'Difference is not a function');
 	});
-	it('Difference(array) is equal to _.difference(array)', function () {
+	it('expected input', () => {
 		var input = [ [ 0, 1, 2, 3, [ 4 ] ], [ 1, 2 ], [ [ 4 ] ] ];
 		var output = _.difference(...input);
 		chai.assert.deepEqual(Difference(...input), output, 'whoops');
 	});
-	it('Difference([ undefined ]) is equal to _.difference([ undefined ])', function () {
+	it('[ undefined ]', () => {
 		var input = [ undefined ];
 		var output = _.difference(...input);
 		chai.assert.deepEqual(Difference(...input), output, 'whoops');
 	});
-	it('Difference([ ], [ ]) is equal to _.difference([ ], [ ])', function () {
+	it('[ null ]', () => {
+		var input = [ null ];
+		var output = _.difference(...input);
+		chai.assert.deepEqual(Difference(...input), output, 'whoops');
+	});
+	it('[ [ ], [ ] ]', () => {
 		var input = [ [], [] ];
 		var output = _.difference(...input);
 		chai.assert.deepEqual(Difference(...input), output, 'whoops');
 	});
-	it('Difference([ -0 ], [ +0 ] ) is equal to _.difference([ -0 ], [ +0 ])', function () {
+	it('[ [ -0 ], [ +0 ] ]', () => {
 		var input = [ [ -0 ], [ +0 ] ];
 		var output = _.difference(...input);
 		chai.assert.deepEqual(Difference(...input), output, 'whoops');
 	});
-	it('Difference([ [ undefined ], args ]) is equal to _.difference([ [ undefined ], args ])', function () {
+	it('[ [ undefined ], args ]', () => {
 		var input = [ [ undefined ], undefined, 1, 2, 3 ];
 		var output = _.difference(...input);
 		chai.assert.deepEqual(Difference(...input), output, 'whoops');
 	});
-	it('Difference([object, integer]) is equal to _.difference([object, integer])', function () {
+	it('[ object, integer ]', () => {
 		var input = [ { 1: 'a', 2: { 3: 'c' } }, 2 ];
 		var output = _.difference(...input);
 		chai.assert.deepEqual(Difference(...input), output, 'whoops');
 	});
-	it('Difference([string, integer]) is equal to _.difference([string, integer])', function () {
+	it('[ string, integer ]', () => {
 		var input = [ 'string', 2 ];
 		var output = _.difference(...input);
 		chai.assert.deepEqual(Difference(...input), output, 'whoops');
