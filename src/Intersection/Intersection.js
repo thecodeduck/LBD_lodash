@@ -1,5 +1,5 @@
 function Intersection() {
-	const arr = arguments[0].slice();
+	const arr = Array.isArray(arguments[0]) || typeof (arguments[0]) === 'string' ? arguments[0].slice() : [];
 	let argl = arguments.length - 1;
 	if (argl === 0) {
 		return arr;
@@ -7,19 +7,7 @@ function Intersection() {
 
 	let result = [];
 
-	const smallestArr = function (args) {
-		let init;
-		let counter = Infinity;
-		for (let i = 1; i < argl + 1; i++) {
-			if (args[i].length <= counter) {
-				counter = args[i].length;
-				init = i;
-			}
-		}
-		return args[init];
-	};
-
-	const initArg = argl === 1 ? arguments[1] : smallestArr(arguments);
+	const initArg = arguments[1];
 
 	const getInit = function () {
 		for (let i = 0; i < arr.length; i++) {
@@ -59,6 +47,5 @@ function Intersection() {
 	result = multiCompare(arguments);
 	return result;
 }
-
 
 module.exports = Intersection;
