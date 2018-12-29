@@ -1,8 +1,9 @@
 function Pull() {
-	const arr = arguments[0].slice();
+	const arr = Array.isArray(arguments[0]) || typeof (arguments[0]) === 'string' ? arguments[0].slice() : undefined;
 	let argl = arguments.length - 1;
-	if (argl === 0) {
-		return arr;
+// need more evaluation on !Array return
+	if (argl === 0 || !Array.isArray(arguments[0])) {
+		return arguments[0];
 	}
 	let compareSet = new Set();
 	let hold = [];
