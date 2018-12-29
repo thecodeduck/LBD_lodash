@@ -11,7 +11,7 @@ setup:
 	pnpm install
 
 ##	tests - run all tests
-##  test NAME=name - run single test, searches thru 'describe' suite
+##	test NAME=name - run single test, searches thru 'describe' suite
 ##	To run just one test: mocha ./src/**/*.tests.js --grep FileName
 ##
 tests:
