@@ -10,71 +10,71 @@ describe('Join is equal to _.join', () => {
 	it('expected input', () => {
 		var input = [ [ 'a', 'b', 'c' ], '.' ];
 		var output = _.join(...input);
-		chai.assert.deepEqual(output, Join(...input), 'whoops');
+		chai.assert.deepEqual(Join(...input), output, 'whoops');
 	});
 	it('expected input with default value', () => {
 		var input = [ 'a', 'b', 'c' ];
 		var output = _.join(input);
-		chai.assert.deepEqual(output, Join(input), 'whoops');
+		chai.assert.deepEqual(Join(input), output, 'whoops');
 	});
 	it('undefined', () => {
 		var input = undefined;
 		var output = _.join(input);
-		chai.assert.deepEqual(output, Join(input), 'whoops');
+		chai.assert.deepEqual(Join(input), output, 'whoops');
 	});
 	it('[ undefined ]', () => {
 		var input = [ undefined ];
 		var output = _.join(input);
-		chai.assert.deepEqual(output, Join(input), 'whoops');
+		chai.assert.deepEqual(Join(input), output, 'whoops');
 	});
 	it('[ [ undefined ], undefined ]', () => {
 		var input = [ [ undefined ], undefined ];
 		var output = _.join(...input);
-		chai.assert.deepEqual(output, Join(...input), 'whoops');
+		chai.assert.deepEqual(Join(...input), output, 'whoops');
 	});
 	it('[ array ,  array ]', () => {
 		var input = [ [ 1, 2, 3 ], [ 5, 6 ] ];
 		var output = _.join(...input);
-		chai.assert.deepEqual(output, Join(...input), 'whoops');
+		chai.assert.deepEqual(Join(...input), output, 'whoops');
 	});
 	it('[ array , integer ]', () => {
 		var input = [ [ 0, 1, 2, 3, [ 4 ], 4 ], 4 ];
 		var output = _.join(...input);
-		chai.assert.deepEqual(output, Join(...input), 'whoops');
+		chai.assert.deepEqual(Join(...input), output, 'whoops');
 	});
 	it('[ object, integer ]', () => {
 		var input = [ { 1: 'a', 2: { 3: 'c' } }, 2 ];
 		var output = _.join(...input);
-		chai.assert.deepEqual(output, Join(...input), 'whoops');
+		chai.assert.deepEqual(Join(...input), output, 'whoops');
 	});
 	it('string', () => {
 		var input = 'string';
 		var output = _.join(input);
-		chai.assert.deepEqual(output, Join(input), 'whoops');
+		chai.assert.deepEqual(Join(input), output, 'whoops');
 	});
 	it('[ string, null ]', () => {
 		var input = [ 'string', null ];
 		var output = _.join(...input);
-		chai.assert.deepEqual(output, Join(...input), 'whoops');
+		chai.assert.deepEqual(Join(...input), output, 'whoops');
 	});
 	it('[ string, integer ]', () => {
 		var input = [ 'string', 3 ];
 		var output = _.join(...input);
-		chai.assert.deepEqual(output, Join(...input), 'whoops');
+		chai.assert.deepEqual(Join(...input), output, 'whoops');
 	});
 	it('integer', () => {
 		var input = 2;
 		var output = _.join(input);
-		chai.assert.deepEqual(output, Join(input), 'whoops');
+		chai.assert.deepEqual(Join(input), output, 'whoops');
 	});
 	it('object', () => {
 		var input = { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5 };
 		var output = _.join(input);
-		chai.assert.deepEqual(output, Join(input), 'whoops');
+		chai.assert.deepEqual(Join(input), output, 'whoops');
 	});
 	it('[ undefined, integer, null, boolean, object ]', () => {
 		let input = [ undefined, 1, null, true, { 1: 2 } ];
 		var output = _.join(input);
-		chai.assert.deepEqual(output, Join(input), 'whoops');
+		chai.assert.deepEqual(Join(input), output, 'whoops');
 	});
 });
