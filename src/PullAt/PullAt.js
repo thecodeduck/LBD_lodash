@@ -1,10 +1,16 @@
 function PullAt() {
+	const target = Array.isArray(arguments[0]) || typeof (arguments[0]) === 'string' ? arguments[0].slice() : undefined;
+	const argl = arguments.length - 1;
+	if (argl === 0 || !Array.isArray(target) || !Array.isArray(arguments[1])) {
+		return [];
+	}
+
 	const indexes = new Set(arguments[1]);
 	const result = [];
 	let ii = 0;
-	for (let i = 0; i < arguments[0].length; i++) {
+	for (let i = 0; i < target.length; i++) {
 		if (indexes.has(i)) {
-			result.push(arguments[0][i]);
+			result.push(target[i]);
 		} else {
 // eslint-disable-next-line
 			if (i === ii) {
@@ -17,7 +23,7 @@ function PullAt() {
 			}
 		}
 	}
-	arguments[0].length = arguments[0].length - indexes.size;
+	target.length = target.length - indexes.size;
 	return result;
 }
 
