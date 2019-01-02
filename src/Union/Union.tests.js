@@ -8,7 +8,7 @@ describe('Union is equal to _.union', () => {
 		chai.assert.isFunction(Union, 'Union is not a function');
 	});
 	it('expected input', () => {
-		var input = [ 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6 ];
+		var input = [ [ 0, 1, 1, 2 ], [ 2, 3, 3, 4, 4 ], [ 5, 5, 6, 6 ] ];
 		var output = _.union(input);
 		chai.assert.deepEqual(Union(input), output, 'whoops');
 	});
